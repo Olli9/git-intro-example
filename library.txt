@@ -1,0 +1,36 @@
+Verwendung: git merge [<Optionen>] [<Commit>...]
+   oder: git merge --abort
+   oder: git merge --continue
+
+    -n                    keine Zusammenfassung der Unterschiede am Schluss des Merges anzeigen
+    --stat                eine Zusammenfassung der Unterschiede am Schluss des Merges anzeigen
+    --summary             (Synonym für --stat)
+    --log[=<Anzahl>]      (höchstens <n>) Einträge von "shortlog" zur Beschreibung des Merge-Commits hinzufügen
+    --squash              einen einzelnen Commit erzeugen statt einen Merge durchzuführen
+    --commit              einen Commit durchführen, wenn der Merge erfolgreich war (Standard)
+    -e, --edit            Bearbeitung der Beschreibung vor dem Commit
+    --cleanup <Modus>     wie Leerzeichen und #Kommentare von der Beschreibung getrennt werden sollen
+    --ff                  Vorspulen erlauben (Standard)
+    --ff-only             abbrechen, wenn kein Vorspulen möglich ist
+    --rerere-autoupdate   Index, wenn möglich, mit wiederverwendeter Konfliktauflösung aktualisieren
+    --verify-signatures   den genannten Commit auf eine gültige GPG-Signatur überprüfen
+    -s, --strategy <Strategie>
+                          zu verwendende Merge-Strategie
+    -X, --strategy-option <Option=Wert>
+                          Option für ausgewählte Merge-Strategie
+    -m, --message <Beschreibung>
+                          Commit-Beschreibung zusammenführen (für einen Merge, der kein Vorspulen war)
+    -F, --file <Pfad>     Beschreibung von Datei lesen
+    -v, --verbose         erweiterte Ausgaben
+    -q, --quiet           weniger Ausgaben
+    --abort               den sich im Gange befindlichen Merge abbrechen
+    --quit                --abort, aber Index und Arbeitsverzeichnis unverändert lassen
+    --continue            den sich im Gange befindlichen Merge fortsetzen
+    --allow-unrelated-histories
+                          erlaube das Zusammenführen von nicht zusammenhängenden Historien
+    --progress            Fortschrittsanzeige erzwingen
+    -S, --gpg-sign[=<GPG-Schlüsselkennung>]
+                          Commit mit GPG signieren
+    --overwrite-ignore    ignorierte Dateien aktualisieren (Standard)
+    --signoff             'Signed-off-by:'-Zeile hinzufügen
+    --no-verify           Hooks pre-merge-commit und commit-msg umgehen
